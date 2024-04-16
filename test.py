@@ -31,6 +31,6 @@ class Test(unittest.TestCase): # создаем класс для тестиро
         with open('login.txt', 'r') as file: # открываем файл
             line=file.readlines()[-1].strip() # считываем последнюю строку в line
         self.assertEqual("регистрация прошла успешно!",response.text) # ответ, полученный в response должен быть равен 'регистрация прошла успешно!'
-        self.assertEqual(line,'david@gmail.com:rd65G7')  # последняя строка из файла login.txt должна равняться 'Evgeniy@gmail.com:rd65G7'
+        self.assertEqual(line,'david@gmail.com:rd65G7')  # последняя строка из файла login.txt должна равняться 'david@gmail.com:rd65G7'
 if __name__ == '__main__': # при условии запуска скрипта
     unittest.main() # запускаем все тесты
